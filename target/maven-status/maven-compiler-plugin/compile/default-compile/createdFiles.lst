@@ -1,0 +1,11 @@
+com\zidio\auth\dto\ApplicationRequest.class
+com\zidio\auth\repository\ApplicationRepository.class
+com\zidio\auth\entity\Application.class
+com\zidio\auth\controller\FileUploadController.class
+com\zidio\auth\entity\Student.class
+com\zidio\auth\controller\ApplicationController.class
+com\zidio\auth\entity\Profile.class
+com\zidio\auth\entity\Application$Builder.class
+com\zidio\auth\service\ApplicationService.class
+com\zidio\auth\repository\StudentRepository.class
+com\zidio\auth\dto\ApplicationResponse.class
