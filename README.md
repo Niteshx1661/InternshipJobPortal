@@ -138,7 +138,7 @@ mvn spring-boot:run
 spring.mail.username=your_gmail@gmail.com
 spring.mail.password=your_app_password
 ```
-####📝Note - ⚠️Make sure to enable "App Passwords" and 2FA on your Gmail account
+#### 📝Note - ⚠️Make sure to enable "App Passwords" and 2FA on your Gmail account
 ---
 
 ## 📁 **Project Structure**
