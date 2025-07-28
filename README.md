@@ -1,6 +1,3 @@
-# **Internship & JobPortal**
-Here is a complete project report of **ZIDIO Connect** - Authentication and Profile Management System.
-
 # 💼 **Zidio Connect – Job Portal System**
 
 Zidio Connect is a comprehensive job portal web application developed as part of my internship project at Zidio Development. 
@@ -9,6 +6,11 @@ The platform facilitates seamless interaction between **students/job seekers** a
 This project is divided into two main modules:
 - 🖥️ **Frontend**: React.js + TailwindCSS
 - 🔧 **Backend**: Java Spring Boot + Spring Security + MySQL
+
+---
+
+## 📸 **Demo Preview**
+🔗 [Click here to watch the demo video on LinkedIn](https://www.linkedin.com/posts/nitx-patil_zidioconnect-springboot-reactjs-activity-7355280348877934596-uQOP?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFBgtO8B0cGk7vK7WUI55kzith0grZh87Fg)
 
 ---
 
@@ -146,6 +148,7 @@ spring.mail.password=your_app_password
 ---
 
 ## 📁 **Project Structure**
+
 ```bash
 InternshipJobPortal/
 ├── zidio-frontend/   # React Frontend
@@ -155,23 +158,56 @@ InternshipJobPortal/
 ---
 
 ## 🌐 **API Endpoints**
-- ### 🔐 Authentication
+### 🔐 Authentication APIs
  - POST /api/auth/register
  - POST /api/auth/login
  - GET /api/auth/verify?token=...
+ - POST /api/auth/resend-token?email=... (for resending activation email)
+ - GET /api/auth/roles/{email} (to fetch user role by email)
 
-- ### 👤 Student
+### 👤 Student APIs
  - POST /userprofile/registerstudprofile
  - GET /students/profile/{email}
+ - PUT /students/profile/update/{email}
+ - GET /students/all (Admin only)
+ - DELETE /students/profile/delete/{email} (Admin/Student access)
 
-- ### 👨‍💼 Recruiter
+### 👨‍💼 Recruiter APIs
  - POST /userprofile/registerrecruiterprofile
  - GET /recruiters/profile/{email}
+ - PUT /recruiters/profile/update/{email}
+ - GET /recruiters/all (Admin only)
+ - DELETE /recruiters/profile/delete/{email} (Admin/Recruiter access)
 
----
+### 💼 Job APIs
+ - POST /api/jobs/create (Recruiter only)
+ - PUT /api/jobs/update/{jobId}
+ - GET /api/jobs/getall (Public access)
+ - GET /api/jobs/{jobId} (Get job details)
+ - DELETE /api/jobs/delete/{jobId} (Recruiter only)
+ - GET /api/jobs/by-recruiter/{email} (Recruiter's posted jobs)
 
-## 📸 **Demo Preview**
-🔗 [Click here to watch the demo video on LinkedIn](https://www.linkedin.com/posts/nitx-patil_zidioconnect-springboot-reactjs-activity-7355280348877934596-uQOP?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFBgtO8B0cGk7vK7WUI55kzith0grZh87Fg)
+### 📄 File Upload & Download APIs
+ - POST /api/files/upload
+ - GET /api/files/download/{filename}
+ - GET /api/files/all (List all uploaded files)
+ - File type filtering and duplicate filename resolution implemented
+
+### 💳 Payment APIs
+ - POST /api/payment/initiate
+ - GET /api/payment/history/{email} (User’s payment history)
+ - Test mode payments are supported using dummy credentials
+
+### 💡 Subscription APIs
+ - POST /api/subscription/activate
+ - GET /api/subscription/status/{email} (Returns: FREE / PAID)
+ - Premium features restricted via role & subscription validation
+
+### 📊 Analytics APIs
+ - GET /api/analytics/user-counts (Students, Recruiters, Admins)
+ - GET /api/analytics/job-counts
+ - GET /api/analytics/subscription-summary (Paid vs Free)
+ - GET /api/analytics/applications-per-job
 
 ---
 
