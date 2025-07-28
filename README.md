@@ -230,7 +230,7 @@ Also thankful to the **Zidio Development** team for providing an opportunity to 
 
 ---
 
-## 🧑‍💻** Developed By**
+## 🧑‍💻**Developed By**
 ### **Nitesh Patil**
 - 📧 [nitxpatil550@gmail.com](mailto:nitxpatil550@gmail.com)
 - 🌐 [LinkedIn Profile](www.linkedin.com/in/nitx-patil)
